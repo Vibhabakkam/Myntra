@@ -9,151 +9,1411 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myntra</title>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/d4fa596027.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra</title>
     <style>
         * {
-            margin: 0%;
-            padding: 0%;
+            padding: 0;
+            margin: 0;
         }
 
-        #screen {
-            border: 1px solid black;
+        #navbar {
             width: 100%;
-        }
-
-        #navdiv {
-            height: 100px;
-            border: 1px solid black;
-            width: 100%;
-            display: flex;
-
-        }
-
-        #navdiv>div:nth-child(1) {
+            height: 60px;
             display: flex;
             justify-content: space-around;
-            width: 45%;
-            height: 60px;
+            border-bottom: 1px solid #7c7d91;
+        }
+
+        #leftside {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+        }
+
+        #leftside>div:nth-child(1)>img {
+            height: 40px;
+            width: 40px;
             margin-top: 10px;
         }
 
-        #navdiv>div:nth-child(1)>p {
+        #leftside>div:nth-child(2) {
             margin-top: 20px;
-
         }
 
-        #navdiv>div:nth-child(2) {
+        #leftside>div:nth-child(2)>a {
+            margin-left: 15px;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #rightside {
             display: flex;
-            height: 45px;
-            width: 30%;
-            background-color: #f5f5f6;
-            border-radius: 3px;
-            margin-top: 20px;
+            /* justify-content: space-evenly; */
+            width: 50%;
         }
 
-        #navdiv>div:nth-child(2)>input {
+        #rightside>div:nth-child(1) {
+            width: 290px;
+            height: 30px;
+            /* border: 1px solid black; */
             background-color: #f5f5f6;
-            font-size: 15px;
-            width: 300px;
-            margin-left: 20px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        #rightside>div:nth-child(1)>i {
+            font-size: 12px;
+            color: #7c7d91;
+            margin-left: 10px;
+            margin-top: 9px;
+        }
+
+        #rightside>div:nth-child(1)>input {
             border: none;
             outline: none;
+            background-color: #f5f5f6;
+            width: 250px;
+            font-size: 11px;
+            margin-left: 10px;
         }
 
-        #navdiv>div:nth-child(2)>i {
+        #rightside>div:nth-child(2) {
             margin-top: 15px;
-            padding-left: 15px;
+            margin-left: 25px;
+        }
+
+        #rightside>div:nth-child(2)>button {
+            cursor: pointer;
+            height: 30px;
+            width: 50px;
+            background-color: white;
+            border: 0.5px solid black;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        #rightside>div:nth-child(3) {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        #rightside>div:nth-child(3)>div {
+            margin-left: 25px;
+        }
+
+        #rightside>div:nth-child(3)>div:nth-child(1)>i {
+            margin-left: 7px;
+        }
+
+        #rightside>div:nth-child(3)>div:nth-child(2)>i {
+            margin-left: 11px;
+        }
+
+        #rightside>div:nth-child(3)>div:nth-child(3)>i {
+            margin-left: 1px;
+        }
+
+        #body {
+            width: 100%;
+
+        }
+
+        #body>div:nth-child(1) {
+            margin-top: 20px;
+            font-size: 12px;
+            margin-left: 22px;
+        }
+
+        #top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #leftside1 {
+            width: 58%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 10px;
+        }
+
+        #leftside1>img {
+            margin-top: 10px;
+            width: 48%;
+            height: 420px;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        #leftside1>img:nth-child(3) {
+            margin-top: -490px;
+            position: relative;
+        }
+
+        #leftside1>img:nth-child(4) {
+            margin-top: -490px;
+            position: relative;
+        }
+
+        #leftside1>img:nth-child(5) {
+            margin-top: -560px;
+            position: relative;
+        }
+
+        #rightside1 {
+            width: 40%;
+        }
+
+        #rightside1>div {
+            width: 96%;
+            border-bottom: 1px solid #7c7d91;
+        }
+
+        #first {
+            margin-top: 10px;
+            height: 75px;
+        }
+
+        #first>p {
+            margin-top: 3px;
+            font-size: 15px;
+            color: #7c7d91;
+        }
+
+        #first>a {
+            margin-top: 7px;
+            font-size: 13px;
+            display: flex;
+            border: 1px solid #7c7d91;
+            width: 113px;
+        }
+
+        #first>a>i {
+            font-size: 10px;
+            color: green;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+
+        #first>a>p {
+            margin-left: 3px;
+        }
+
+        #second {
+            margin-top: 10px;
+            height: 200px;
+        }
+
+        #second>div {
+            display: flex;
+        }
+
+        #second>div:nth-child(1)>p {
+            color: #7c7d91;
+            margin-left: 8px;
             font-size: 15px;
         }
 
-        #navdiv>div:nth-child(3) {
-            display: flex;
-            margin-top: 15px;
-            margin-left: 30px;
-            justify-content: space-around;
-            height: 50px;
-            width: 20%;
-            font-size: 20px;
+        #second>div:nth-child(1)>h4:nth-child(3) {
+            color: orange;
+            margin-left: 8px;
+            font-size: 15px;
         }
 
-        #navdiv>div:nth-child(3)i {
+        #second>div:nth-child(2) {
+            margin-top: 6px;
+            color: green;
+        }
+
+        #second>div:nth-child(3) {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        #second>div:nth-child(3)>h5:nth-child(1) {
+            margin-left: -10px;
+        }
+
+        #second>div:nth-child(3)>h5:nth-child(2) {
+            color: #ff4f74;
             margin-left: 20px;
         }
 
-        #bodydiv {
-            height: 1000px;
-            border: 1px solid black;
-            width: 100%;
+        #second>div:nth-child(4) {
             margin-top: 15px;
         }
 
-        #bodydiv>div:nth-child(1) {
-            margin-left: 50px;
-            font-size: 18px;
+        #second>div:nth-child(4)>div {
+            height: 35px;
+            width: 35px;
+            border: 0.5px solid #7c7d91;
+            border-radius: 17.5px;
+            text-align: center;
+
         }
 
-        #bodydiv>div:nth-child(2) {
+        #second>div:nth-child(4)>div>h6 {
+            margin-top: 10px;
+        }
+
+        #second>div:nth-child(4)>div:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        #second>div:nth-child(4)>div:nth-child(2),
+        div:nth-child(3),
+        div:nth-child(4),
+        div:nth-child(5),
+        div:nth-child(6),
+        div:nth-child(7) {
+            margin-left: 10px;
+        }
+
+        #second>div:nth-child(5) {
+            margin-top: 20px;
+        }
+
+        #second>div:nth-child(5)>div {
             display: flex;
-            width: 100%;
-            height: 1000px;
-            border: 1px solid black;
+
         }
 
-        #bodyimg {
-            border: 1px solid black;
-            width: 50%;
-            height: 700px;
-            padding-left: 50px;
+        #second>div:nth-child(5)>div:nth-child(1) {
+            cursor: pointer;
+            margin-left: 0px;
+            height: 40px;
+            width: 220px;
+            background-color: #ff4f74;
+            border-radius: 3px;
+            color: white;
+            align-items: center;
         }
+
+        #second>div:nth-child(5)>div:nth-child(1)>i {
+            margin-left: 60px;
+            font-size: 13px;
+        }
+
+        #second>div:nth-child(5)>div:nth-child(1)>h6 {
+            margin-left: 8px;
+        }
+
+        #second>div:nth-child(5)>div:nth-child(2) {
+            cursor: pointer;
+            height: 38px;
+            width: 140px;
+            border: 1px solid #7c7d91;
+            border-radius: 3px;
+            margin-left: 13px;
+            align-items: center;
+        }
+
+        #second>div:nth-child(5)>div:nth-child(2)>i {
+            margin-left: 30px;
+            font-size: 12px;
+        }
+
+        #second>div:nth-child(5)>div:nth-child(2)>h6 {
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        #third {
+            height: 400px;
+            margin-top: 25px;
+            margin-left: 0px;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(1) {
+            display: flex;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(1)>i {
+            margin-left: 10px;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) {
+            display: flex;
+            margin-top: 15px;
+            height: 30px;
+            width: 182px;
+            border: 1px solid #7c7d91;
+            border-radius: 3px;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>input {
+            border: none;
+            outline: none;
+            font-size: 12px;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div {
+            font-size: 12px;
+            color: #ff4f74;
+            margin-top: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        #third>div:nth-child(1)>div:nth-child(3) {
+            font-size: 14px;
+            margin-top: 20px;
+            margin-left: 0;
+        }
+
+        #third>div:nth-child(2) {
+            margin-top: 30px;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(1) {
+            display: flex;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(1)>i {
+            margin-left: 10px;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(2) {
+            margin-top: 15px;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(2)>div:nth-child(1) {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(2)>div:nth-child(3) {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #ff4f74;
+            font-weight: bold;
+            margin-left: 0;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(3) {
+            margin-top: 15px;
+            margin-left: 0;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(3)>div:nth-child(1) {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(3)>div:nth-child(2) {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        #third>div:nth-child(2)>div:nth-child(3)>div:nth-child(3) {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #ff4f74;
+            font-weight: bold;
+            margin-left: 0;
+        }
+
+        #fourth {
+            height: 420px;
+            margin-left: 0;
+        }
+
+        #fourth>div:nth-child(1) {
+            margin-top: 20px;
+        }
+
+        #fourth>div:nth-child(1)>div:nth-child(1) {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #fourth>div:nth-child(1)>div:nth-child(2) {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        #fourth>div:nth-child(2)>div:nth-child(1) {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #fourth>div:nth-child(2)>div:nth-child(2) {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        #fourth>div:nth-child(3) {
+            margin-left: 0;
+        }
+
+        #fourth>div:nth-child(3)>div:nth-child(1) {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #fourth>div:nth-child(3)>div:nth-child(2) {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        #fourth>div:nth-child(4) {
+            margin-left: 0;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(1) {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2) {
+            display: flex;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(1) {
+            height: 200px;
+            width: 180px;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(1)>div {
+            height: 40px;
+            border-bottom: 1px solid #7c7d91;
+
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(1) {
+            font-size: 11px;
+            margin-top: 10px;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2) {
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(1)>div:nth-child(3),
+        div:nth-child(4) {
+            margin-left: 0;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(2) {
+            height: 200px;
+            width: 180px;
+            margin-left: 30px;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(2)>div {
+            height: 40px;
+            border-bottom: 1px solid #7c7d91;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(2)>div>div:nth-child(1) {
+            font-size: 11px;
+            margin-top: 10px;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(2)>div>div:nth-child(2) {
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(2)>div:nth-child(2)>div:nth-child(3) {
+            margin-left: 0;
+        }
+
+        #fourth>div:nth-child(4)>div:nth-child(3) {
+            margin-top: 10px;
+            margin-left: 0;
+            font-size: 12px;
+            font-weight: bold;
+            color: #ff4f74;
+        }
+
+        #fifth {
+            margin-left: 0;
+            height: 230px;
+            margin-top: 15px;
+        }
+
+        #fifth>div:nth-child(1) {
+            display: flex;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #fifth>div:nth-child(1)>i {
+            margin-left: 5px;
+        }
+
+        #fifth>div:nth-child(2) {
+            margin-top: 20px;
+        }
+
+        #fifth>div:nth-child(2)>div:nth-child(1) {
+            display: flex;
+        }
+
+        #fifth>div:nth-child(2)>div:nth-child(1)>p {
+            font-size: 30px;
+        }
+
+        #fifth>div:nth-child(2)>div:nth-child(1)>i {
+            margin-top: 15px;
+            font-size: 12px;
+            color: green;
+            margin-left: 5px;
+        }
+
+        #fifth>div:nth-child(2)>div:nth-child(2) {
+            margin-top: 2px;
+            font-size: 12px;
+        }
+
+        #fifth>div:nth-child(3) {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 0;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        #fifth>div:nth-child(3)>i {
+            margin-left: 5px;
+        }
+
+        #fifth>div:nth-child(4) {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        #fifth>div:nth-child(4)>div:nth-child(2) {
+            margin-top: 5px;
+        }
+
+        #fifth>div:nth-child(5) {
+            margin-top: 10px;
+            margin-left: 0;
+            font-size: 12px;
+            font-weight: bold;
+            color: #ff4f74;
+        }
+
+        #sixth {
+            margin: 0;
+            height: 370px;
+        }
+
+        #sixth>div:nth-child(1) {
+            margin-top: 15px;
+        }
+
+        #sixth>div:nth-child(1)>div:nth-child(1) {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #sixth>div:nth-child(1)>div:nth-child(2) {
+            margin-top: 7px;
+        }
+
+        #sixth>div:nth-child(1)>div:nth-child(2)>img {
+            height: 60px;
+            width: 60px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1) {
+            margin-top: 15px;
+            border-bottom: 0.5px solid #cacbcf;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(2) {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(3) {
+            margin-top: 7px;
+            margin-left: 0;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(3)>img {
+            height: 60px;
+            width: 60px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(4) {
+            margin-top: 5px;
+            display: flex;
+            font-size: 13px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(4)>div:nth-child(2) {
+            margin-left: 230px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(1)>div:nth-child(4)>div:nth-child(2)>i:nth-child(2) {
+            margin-left: 20px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2) {
+            margin-top: 15px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2)>div:nth-child(1) {
+            font-size: 13px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
+            margin-top: 7px;
+            margin-left: 0;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>img {
+            height: 60px;
+            width: 60px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2)>div:nth-child(3) {
+            margin-top: 5px;
+            display: flex;
+            font-size: 13px;
+            margin-left: 0;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2) {
+            margin-left: 190px;
+        }
+
+        #sixth>div:nth-child(2)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>i:nth-child(2) {
+            margin-left: 20px;
+        }
+
+        #seventh {
+            margin-top: 15px;
+            margin-left: 0;
+            font-size: 13px;
+            height: 120px;
+            border-bottom: 0.5px white;
+        }
+
+        #seventh>div:nth-child(1) {
+            color: #ff4f74;
+            font-weight: bold;
+        }
+
+        #seventh>div:nth-child(2) {
+            margin-top: 15px;
+        }
+
+        #seventh>div:nth-child(3) {
+            margin-top: 15px;
+            margin-left: 0;
+        }
+
+        #seventh>div:nth-child(4) {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        #midddle {
+            width: 100%;
+            border: 1px solid blue;
+        }
+
+        #middle>div:nth-child(3) {
+            width: 15;
+        }
+
+        #middle>div:nth-child(1) {
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 17px;
+        }
+
+        #middle>div:nth-child(2) {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        #middle>div:nth-child(2)>div {
+            width: 15%;
+            height: 280px;
+            border: 1px solid #cacbcf;
+        }
+
+        #middle>div:nth-child(2)>div:nth-child(3),
+        div:nth-child(5),
+        div:nth-child(6) {
+            margin-left: 0;
+        }
+
+        #middle>div:nth-child(2)>div>div:nth-child(1)>img {
+            width: 230px;
+            height: 220px;
+        }
+
+        #middle>div:nth-child(2)>div>div:nth-child(2) {
+            font-size: 12px;
+        }
+
+        #middle>div:nth-child(3) {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+        #middle>div:nth-child(3)>div {
+            width: 15%;
+            height: 280px;
+            border: 1px solid #cacbcf;
+        }
+
+        #middle>div:nth-child(3)>div>div:nth-child(1)>img {
+            width: 230px;
+            height: 220px;
+        }
+
+        #middle>div:nth-child(3)>div>div:nth-child(2) {
+            font-size: 12px;
+        }
+
+        #middle>div:nth-child(3)>div:nth-child(3) {
+            margin-left: 0;
+        }
+        #footer{
+            width: 100%;
+            margin-top: 50px;
+            background-color: #fafbfc;
+        }
+        #top1{
+            display: flex;
+            margin-left: 150px;
+            font-size: 13px;
+        }
+        #top1>div:nth-child(1){
+            margin-top: 25px;
+            height: 250px;
+            width: 12%;
+        }
+        #top1>div:nth-child(1)>div:nth-child(1)>div:nth-child(1){
+            font-size: 12px;
+        }
+        #top1>div:nth-child(1)>div:nth-child(1)>div:nth-child(2){
+            margin-top: 10px;
+        }
+        #top1>div:nth-child(1)>div:nth-child(2)>div:nth-child(1){
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        #top1>div:nth-child(1)>div:nth-child(2)>div:nth-child(2){
+            margin-top: 10px;
+        }
+        #top1>div:nth-child(2){
+            margin-top: 25px;
+            margin-left: 50px;
+            height: 180px;
+            width: 14%;
+        }
+        #top1>div:nth-child(2)>div:nth-child(1){
+            font-size: 12px;
+        }
+        #top1>div:nth-child(2)>div:nth-child(2){
+            margin-top: 10px;
+        }
+        #top1>div:nth-child(3){
+            margin-top: 25px;
+            margin-left: 40px;
+            height: 120px;
+            width: 24%;
+        }
+        #top1>div:nth-child(3)>div:nth-child(1){
+            font-size: 12px;
+        }
+        #top1>div:nth-child(3)>div:nth-child(2){
+            margin-top: 10px;
+        }
+        #top1>div:nth-child(3)>div:nth-child(2)>img{
+            height: 30px;
+            width: 100px;
+            border-radius: 5px;
+            margin-right: 8px;
+        }
+        #top1>div:nth-child(3)>div:nth-child(3){
+            margin-top: 10px;
+            margin-left: 0;
+        }
+        #top1>div:nth-child(3)>div:nth-child(3)>div:nth-child(1){
+            font-size: 12px;
+        }
+        #top1>div:nth-child(3)>div:nth-child(3)>div:nth-child(2){
+            margin-top: 10px;
+            font-size: 20px;
+            color: #7c7d91;
+        }
+        #top1>div:nth-child(3)>div:nth-child(3)>div:nth-child(2)>i{
+            margin-right: 8px;
+        }
+        #top1>div:nth-child(4){
+            margin-top: 25px;
+            margin-left: 40px;
+            height: 80px;
+            width: 19%;
+        }
+        #top1>div:nth-child(4)>div:nth-child(2){
+            margin-top: 15px;
+        }
+        #bottom2{
+            margin-top: 20px;
+            font-size: 13px;
+            margin-left: 150px;
+            width: 75%;
+            margin-bottom: 25px;
+        }
+        #bottom2>div:nth-child(1){
+            font-size: 12px;
+        }
+        #bottom2>div:nth-child(2){
+            margin-top: 10px;
+        }
+
+
     </style>
 </head>
 
 <body>
-    <div id="screen">
-        <div id="navdiv">
-            <div>
-                <img src="data:image/jpeg;base64,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zX0SFhmiugCnpPRsdVHZ246rxja/xHguYaa0LNSPs9p1Ce5IAS13PYfBdQaXRnDEbR/zJZzNE8arrWObXAWPngVCubGFb7uEufv6ZlhZaRqWrwSxjy9vjOLXX09DaDnqnWY0hl+9IQWtb/8AR8AumDQlEDrej09879mz4ZKy6ojaLNANsAG4AfJRKeit/wB8t349yxradxjhShg+by6FbROjIaOLUZxe821pHbz9F7F3u1jyG4JZzzd3IbArkUdlbRiorBcCglJzk5SeLZ6jZZZERejyEREAYpWXVIOMbr7DmPmvokLDNFdAHzdO6GhrYtV2BGMcgtdjrfDeFyrTOgqikdqyMJbezZBrOa/g7YfA4rrY1ozhiDm3es/bRPGq62OBa4Cx88CpFG4lT3ZFnYaUq2n2r7o8vVPL87sPwcKsdx8l9/or0ckq5Guc1zadrtZ77WuBbutO1x9y6Z/YVDfX9Gp7537JlvLJWu3jYLNsbYBrch8gu9S9xWEVgyyuP5BrQcaMGm82+HZh4PrgepSGMsMMNVo3D+SU7LBYWhzzrO5DcFcY1V5mz2ihEAQiBSkM8Pjuqz6YFXFNkxHzhRjcs0dOArdkTEeGMssigKUAEREAEREAFBClEAYnx3VeSmBV1QQgD54pAssdMArdksgDwyOyyIiACIiACIiACghSiAMT47qvJTAq6osgD53og3LMymAVuyWSGY2MsvaIUAEUIkBClEQMkKURMRIREQBClETEEREAEREAEREAEREAEREAEREAEREAEREAEREAQpREhhQiIAhFCIGEREgP/9k="
-                    alt="">
-                <p>MEN</p>
-                <p>WOMEN</p>
-                <p>KIDS</p>
-                <p>HOME & LIVING</p>
-                <p>BEAUTY</p>
-                <p>STUDIO</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="search for products brands and more">
-            </div>
-            <div>
+    <div>
+        <div id="navbar">
+            <div id="leftside">
                 <div>
-                    <i class="fa-solid fa-user"></i>
-                    <p>profile</p>
+                    <img src="data:image/jpeg;base64,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"
+                        alt="myntra" />
                 </div>
                 <div>
-                    <i class="fa-solid fa-heart"></i>
-                    <p>Wishlist</p>
+                    <a>MEN</a>
+                    <a>WOMEN</a>
+                    <a>KIDS</a>
+                    <a>HOME & LIVING</a>
+                    <a>BEAUTY</a>
+                    <a>STUDIO</a>
+                </div>
+            </div>
+            <div id="rightside">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input placeholder="Search for products, brands and more">
                 </div>
                 <div>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <p>Bag</p>
+                    <button>Update</button>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                        <h6>Profile</h6>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                        <h6>Whishlist</h6>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <h6>Bag</h6>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="bodydiv">
+        <div id="body">
             <div>
-                <p>
-                    Home / clothing / Men clothing / T-shirts / <strong>Roadster Tshirts >More By Roadstar </strong>
-                </p>
+                <a>Home /</a>
+                <a>Clothing /</a>
+                <a>Men Clothing /</a>
+                <a>Tshirts /</a>
+                <a><b>Roadster Tshirts ></b></a>
+                <a><b>More By Roadster</b></a>
             </div>
-            <div>
-                <div id="bodyimg">
+            <div id="top">
+                <div id="leftside1">
+                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (20).jpeg" alt="1">
+                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (17).jpeg" alt="2">
+                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (19).jpeg" alt="3">
+                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (21).jpeg" alt="4">
+                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (22).jpeg" alt="5">
                 </div>
-                <div id="roadstar">
+                <div id="rightside1">
+                    <div id="first">
+                        <h3>Roadster</h3>
+                        <p>Men White Pure Cotton T-shirt</p>
+                        <a><b>4.2</b><i class="fa-solid fa-star"></i>
+                            <p>| 32.2k Ratings</p>
+                        </a>
+                    </div>
+                    <div id="second">
+                        <div>
+                            <h4>₹299</h4>
+                            <p>MRP ₹499</p>
+                            <h4>(40% OFF)</h4>
+                        </div>
+                        <div>
+                            <h5>inclusive of all taxes</h5>
+                        </div>
+                        <div>
+                            <h5>SELECT SIZE</h5>
+                            <h5>SIZE CHART ></h5>
+                        </div>
+                        <div>
+                            <div>
+                                <h6>XS</h6>
+                            </div>
+                            <div>
+                                <h6>S</h6>
+                            </div>
+                            <div>
+                                <h6>M</h6>
+                            </div>
+                            <div>
+                                <h6>L</h6>
+                            </div>
+                            <div>
+                                <h6>XL</h6>
+                            </div>
+                            <div>
+                                <h6>XXL</h6>
+                            </div>
+                            <div>
+                                <h6>4XL</h6>
+                            </div>
 
+                        </div>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <h6>ADD TO BAG</h6>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-heart"></i>
+                                <h6>WISHLIST</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="third">
+                        <div>
+                            <div>
+                                <div>DELIVERY OPTIONS</div>
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+                            <div>
+                                <div>
+                                    <input placeholder="Enter Pincode">
+                                    <div>Check</div>
+                                </div>
+                                <div>Please enter PIN code to check delivery time & Pay on Delivery Availability</div>
+                            </div>
+                            <div>
+                                100% Original Products</br>
+                                Pay on delivery might be available</br>
+                                Easy 14 days returns and exchanges</br>
+                                Try & Buy might be available
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>BEST OFFERS</div>
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+                            <div>
+                                <div>Best Price: Rs. 224</div>
+                                <div>
+                                    <li>Applicable on: Orders above Rs. 799 (only on first purchase)</li>
+                                    <li>Coupon code: MYNTRA200</li>
+                                    <li> Coupon Discount: Rs. 75 off (check cart for final savings)</li>
+
+                                </div>
+                                <div>View Eligible Products</div>
+                            </div>
+                            <div>
+                                <div>EMI option available</div>
+                                <div>
+                                    <li>EMI starting from Rs.14/month</li>
+                                </div>
+                                <div>View Plan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fourth">
+                        <div>
+                            <div>PRODUCT DETAILS</div>
+                            <div>White solid T-shirt, has a round neck, short sleeves</div>
+                        </div>
+                        <div>
+                            <div>Size & Fit</div>
+                            <div>The model (height 6') is wearing a size XL</div>
+                        </div>
+                        <div>
+                            <div>Material & Care</div>
+                            <div>100% cotton</br>
+                                Machine-wash</div>
+                        </div>
+                        <div>
+                            <div>Specifications</div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>Fabric</div>
+                                        <div>Pure Cotton</div>
+                                    </div>
+                                    <div>
+                                        <div>Length</div>
+                                        <div>Regular</div>
+                                    </div>
+                                    <div>
+                                        <div>Multipack Set</div>
+                                        <div>Single</div>
+                                    </div>
+                                    <div>
+                                        <div>Occasion</div>
+                                        <div>Casual</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>Fit</div>
+                                        <div>Regular Fit</div>
+                                    </div>
+                                    <div>
+                                        <div>Main Trend</div>
+                                        <div>New Basics</div>
+                                    </div>
+                                    <div>
+                                        <div>Neck</div>
+                                        <div>Round Neck</div>
+                                    </div>
+                                    <div>
+                                        <div>Pattern</div>
+                                        <div>Solid</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>See More</div>
+                        </div>
+                    </div>
+                    <div id="fifth">
+                        <div>
+                            <div>RATINGS</div>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div>
+                            <div>
+                                <p>4.2</p>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>32.2k Verified Buyers</div>
+                        </div>
+                        <div>
+                            <div>WHAT CUSTOMERS SAID</div>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div>
+                            <div>Fit<br>
+                                <b>Just Right (69%)</b>
+                            </div>
+                            <div>
+                                Length<br>
+                                <b>Just Right (77%)</b>
+                            </div>
+                        </div>
+                        <div>View Details</div>
+                    </div>
+                    <div id="sixth">
+                        <div>
+                            <div>Customer Photos (412)</div>
+                            <div>
+                                <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (6).jpeg" alt="1">
+                                <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (11).jpeg" alt="1">
+                                <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (8).jpeg" alt="1">
+                                <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (9).jpeg" alt="1">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div>Customer Reviews (2971)</div>
+                                <div>I bought it for 200 Rupees. And it very good at this price point. Size is as
+                                    expected.
+                                </div>
+                                <div>
+                                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (18).jpeg" alt="1">
+                                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (12).jpeg" alt="1">
+                                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (14).jpeg" alt="1">
+                                </div>
+                                <div>
+                                    <div>Jaskaran1 | June 2020</div>
+                                    <div>
+                                        <i class="fa-regular fa-thumbs-up"></i> 245
+                                        <i class="fa-regular fa-thumbs-down"></i> 46
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>Product on this price range is too good</div>
+                                <div>
+                                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (13).jpeg" alt="1">
+                                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (15).jpeg" alt="1">
+                                    <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (16).jpeg" alt="1">
+                                </div>
+                                <div>
+                                    <div>Myntra Customer | 6Apr 2022</div>
+                                    <div>
+                                        <i class="fa-regular fa-thumbs-up"></i> 19
+                                        <i class="fa-regular fa-thumbs-down"></i> 3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="seventh">
+                        <div>View all 2971 reviews</div>
+                        <div>Product Code: <b>2275365</b></div>
+                        <div>Seller: Truenet Commerce</div>
+                        <div>View Supplier Information</div>
+                    </div>
+                </div>
+            </div>
+            <div id="middle">
+                <div>SIMILAR PRODUCTS</div>
+                <div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM (1).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Roadster</b></br>
+                            Solid Round Neck T-shirt</br>
+                            <b>Rs. 349(30% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM (2).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>HRX by Hrithik Roshan</b></br>
+                            Rapid Dry Training T-shirt</br>
+                            <b>Rs. 659(40% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM (3).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Roadster</b></br>
+                            Men Solid T-shirt</br>
+                            <b>Rs. 347(42% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM (4).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Roadster</b></br>
+                            Solid Round Neck Pure Cotton T-shirt</br>
+                            <b>Rs. 359(40% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM (5).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Roadster</b></br>
+                            Drop-Shoulder T-shirt</br>
+                            <b>Rs. 349(50% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM (7).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Roadster</b></br>
+                            Solid Round Neck T-shirt</br>
+                            <b>Rs. 324(35% OFF)</b>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.16 PM.jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>WROGN</b></br>
+                            Men Pure Cotton T-shirt</br>
+                            <b>Rs. 659(45% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (1).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>HERE&NOW</b></br>
+                            Solid Round Neck T-shirt</br>
+                            <b>Rs. 384(45% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (3).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>HRX by Hrithik Roshan</b></br>
+                            Men Cotton Pure Cotton T-shirt</br>
+                            <b>Rs. 449(50% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (2).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Roadster</b></br>
+                            Solid Round Neck T-shirt</br>
+                            Rs. 349(30% OFF)<b></b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (17).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>HIGHLANDER</b></br>
+                            Solid Round Neck T-shirt</br>
+                            <b>Rs. 301(45% OFF)</b>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM.jpeg" alt="1">
+                        </div>
+                        <div>
+                            <b>Bewakoof</b></br>
+                            Solid Round Neck Pure Cotton </br>
+                            <b>Rs. 459(Rs. 740 OFF)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="top1">
+                    <div>
+                        <div>
+                            <div>
+                                <b>ONLINE SHOPPING</b>
+                            </div>
+                            <div>
+                                Men</br>
+                                Women</br>
+                                Kids</br>
+                                Home & Living</br>
+                                Beauty</br>
+                                Gift Cards</br>
+                                Myntra Insider
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <b>USEFUL LINKS</b>
+                            </div>
+                            <div>
+                                Blog</br>
+                                Careers</br>
+                                Site Map</br>
+                                Corporate Information</br>
+                                Whitehat
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <b>CUSTOMER POLICIES</b>
+                        </div>
+                        <div>
+                            Contact Us</br>
+                            FAQ</br>
+                            T&C</br>
+                            Terms Of Use</br>
+                            Track Orders</br>
+                            Shipping</br>
+                            Cancellation</br>
+                            Returns</br>
+                            Privacy policy</br>
+                            Grievance Officer
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <b>EXPERIENCE MYNTRA APP ON MOBILE</b>
+                        </div>
+                        <div>
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (4).jpeg" alt="1">
+                            <img src="WhatsApp Image 2023-02-28 at 10.56.17 PM (5).jpeg" alt="1">
+                        </div>
+                        <div>
+                            <div><b>KEEP IN TOUCH</b></div>
+                            <div>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div><b>100% ORIGINAL</b> guarantee for all products at myntra.com</div>
+                        <div><b>Return within 30days</b> of receiving your order</div>
+                    </div>
+                </div>
+                <div id="bottom2">
+                    <div><b>POPULAR SEARCHES</b></div>
+                    <div>Kurta Pajama | Leather Jackets | Sherwani | Shirts | T-Shirts | Waistcoat | Photo Frames | Denim shirts | Blazers | Mirror | Bags | Jackets | Blouse Designs | Crop Tops | Mysore Silk Saree | Kids Lehenga | Suit Design | Lehenga | Girls Dungarees | Top for Girl | Lingerie | Gowns | Saree | Kids Ethnic Wear | Sweaters | Boys Games | Barbie Doll | Shoes For Men | Cricket Shoes | Lipstick | Make Up Kit | Fastrack Watches | Casual Shoes | Online Shopping | Dresses | Babydolls | Eye Makeup | Car Games | Nike Shoes | Puma | United Colors of Benetton | Fastrack | Watches | Backpacks | Men Kurtas | Titan Watches</div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
+        

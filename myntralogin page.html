@@ -20,7 +20,6 @@
 
         #navdiv {
             height: 80px;
-            border: 1px solid black;
             width: 100%;
             display: flex;
 
@@ -88,31 +87,78 @@
             margin-left: 550px;
         }
 
-        #bodymain>:nth-child(1)>img {
+        #bodymain>div:nth-child(1)>img {
             height: 200px;
             width: 400px;
         }
 
-        #bodymain>:nth-child(2) {
+        #bodymain>div:nth-child(2) {
             display: flex;
             height: 60px;
             width: 400px;
-            border: 1px solid black;
             background-color: white;
 
         }
 
-        #bodymain>:nth-child(2)>p {
+        #bodymain>div:nth-child(2)>p {
             font-size: 25px;
             margin-top: 10px;
         }
 
-        #bodymain>:nth-child(3) {
+        #bodymain>div:nth-child(3) {
             background-color: white;
             height: 500px;
             width: 400px;
             font-size: 20px;
         }
+        #lablediv{
+            margin-left: 50px;
+        }
+        #userName{
+            height: 40px;
+            width: 300px;
+            border-color: gray;
+            margin-left: 50px;
+            outline: none;
+        }
+        #userPhone{
+            height: 40px;
+            width: 300px;
+            border-color: gray;
+            margin-left: 50px;
+            outline: none;
+        }
+        #userEmail{
+            height: 40px;
+            width: 300px;
+            border-color: gray;
+            margin-left: 50px;
+            outline: none;
+        }
+        #userPassword{
+            height: 40px;
+            width: 300px;
+            border-color: gray;
+            margin-left: 50px;
+            outline: none;
+        }
+        #para{
+            font-size: 15px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        #regdiv{
+            height: 40px;
+            width: 300px;
+            margin-left: 50px;
+            background-color: #ff3f6c;
+            color: white;
+            margin-top: 5px;
+            font-size: 20px;
+            border: none;
+
+        }
+       
     </style>
 </head>
 
@@ -160,15 +206,17 @@
                 </div>
                 <div>
                     <form onsubmit="register(event)">
-                        <label for="">Name</label><br>
+                        <label id="lablediv" for="">Name</label><br>
                         <input id="userName" type="text"><br>
-                        <label for="">Phone</label><br>
-                        <input id="userNumber" type="number"><br>
-                        <label for="">Email</label><br>
+                        <label id="lablediv" for="">Phone</label><br>
+                        <input id="userPhone" type="number"><br>
+                        <label  id="lablediv" for="">Email</label><br>
                         <input id="userEmail" type="text" value="Email"><br>
-                        <label for="">Passward</label><br>
+                        <label id="lablediv" for="">Password</label><br>
                         <input id="userPassword" type="password" value="Passward"><br>
-                        <input type="submit" value="Register">
+                        <p id="para">By continuing, I agree to the <span style="color: #ff3f6c; font-size: 15px;"> Terms of Use</span> & <span style="color: #ff3f6c; font-size: 15px;">Privacy Policy</span></p> <br>
+                        <input id="regdiv" type="submit" value="REGISTER"> <br>
+                        <p id="para"> Have trouble logging in? <span style="color: #ff3f6c; font-size: 15px;">Get help</span></p>
                         <script src="server.js"></script>
                     </form>
                 </div>

@@ -2,10 +2,10 @@ function register(event) {
     // getting data from html to js
     event.preventDefault();
     var userName = document.getElementById("userName").value;
-    var userNumber = document.getElementById("userNumber").value;
+    var userPhone = document.getElementById("userPhone").value;
     var userEmail = document.getElementById("userEmail").value;
     var userPassword = document.getElementById("userPassword").value;
-    var userData = { name: userName, number : userNumber, email: userEmail, password: userPassword }
+    var userData = { name: userName, number : userPhone, email: userEmail, password: userPassword }
 
     // storing data from js to ls
     var dataFromLS = JSON.parse(localStorage.getItem("userData")) || [];
@@ -26,7 +26,7 @@ function register(event) {
         dataFromLS.push(userData);
         localStorage.setItem("userData", JSON.stringify(dataFromLS));
         document.getElementById("userName").value = " ";
-        document.getElementById("userNumber").value = " ";
+        document.getElementById("userPhone").value = " ";
         document.getElementById("userEmail").value = " ";
         document.getElementById("userPassword").value = " ";
         window.location.href = "/Myntra.html";
