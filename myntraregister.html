@@ -227,6 +227,15 @@
                         <p id="para"> Have trouble logging in? <span style="color: #ff3f6c; font-size: 15px;">Get
                                 help</span></p>
                         <script src="server.js"></script>
+                        <script>
+                            window.onload = function (){
+                                var dataFromLS = JSON.parse(localStorage.getItem("currentUser"));
+                                if (dataFromLS){
+                                    window.location.href ='/ajio.html'
+                                    alert("already register")
+                                }
+                            }
+                        </script>
                     </form>
                 </div>
             </div>
