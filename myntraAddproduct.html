@@ -1,32 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script src="https://kit.fontawesome.com/06489297db.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add products</title>
     <style>
-        #screen{
-            width: 100%;
-            height: 400px;
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-        #screen > div{
-            width: 18%; 
-            height: 200px;
-            border: 1px solid red;   
+        * {
+            padding: 0;
+            margin: 0;
         }
 
+        #navbar {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #7c7d91;
+        }
+
+        #leftside {
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+        }
+
+        #leftside>div:nth-child(1)>img {
+            height: 40px;
+            width: 40px;
+            margin-top: 10px;
+        }
+
+        #leftside>div:nth-child(2) {
+            margin-top: 20px;
+        }
+
+        #leftside>div:nth-child(2)>a {
+            margin-left: 15px;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #rightside {
+            display: flex;
+            /* justify-content: space-evenly; */
+            width: 50%;
+        }
+
+        #rightside>div:nth-child(1) {
+            width: 290px;
+            height: 30px;
+            /* border: 1px solid black; */
+            background-color: #f5f5f6;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+
+        #rightside>div:nth-child(1)>i {
+            font-size: 12px;
+            color: #7c7d91;
+            margin-left: 10px;
+            margin-top: 9px;
+        }
+
+        #rightside>div:nth-child(1)>input {
+            border: none;
+            outline: none;
+            background-color: #f5f5f6;
+            width: 250px;
+            font-size: 11px;
+            margin-left: 10px;
+        }
+
+        #rightside>div:nth-child(2) {
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+
+        #rightside>div:nth-child(2)>button {
+            cursor: pointer;
+            height: 30px;
+            width: 50px;
+            background-color: white;
+            border: 0.5px solid black;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        #rightside>div:nth-child(3) {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        #rightside>div:nth-child(3)>div {
+            margin-left: 25px;
+        }
+
+        #rightside>div:nth-child(3)>div:nth-child(1)>i {
+            margin-left: 7px;
+        }
+
+        #rightside>div:nth-child(3)>div:nth-child(2)>i {
+            margin-left: 11px;
+        }
+
+        #rightside>div:nth-child(3)>div:nth-child(3)>i {
+            margin-left: 1px;
+        }
+
+        #bodydiv {
+            width: 100%;
+            height: 1000px;
+            background-color: #fdefeb;
+        }
+
+        #maindiv {
+            height: 700px;
+            width: 450px;
+            margin-left: 550px;
+            background-color: white;
+        }
+
+        #imgdiv {
+            width: 100%;
+            height: 80px;
+            background-color: #fdefeb;
+        }
+
+        #maindiv>img {
+
+            height: 150px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+
+        #lablediv {
+            font-size: 20px;
+            margin-left: 50px;
+
+        }
+
+        #name {
+            height: 40px;
+            width: 300px;
+            font-size: 20px;
+            margin-left: 50px;
+            margin-bottom: 15px;
+        }
+
+        #image {
+            height: 40px;
+            width: 300px;
+            font-size: 20px;
+            margin-left: 50px;
+            margin-bottom: 15px;
+        }
+
+        #price {
+            height: 40px;
+            width: 300px;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+
+        #paradiv {
+            height: 40px;
+            width: 300px;
+            background-color: #ff3f6c;
+            color: white;
+            font-size: 20px;
+            border: none;
+            margin-left: 50px;
+            margin-top: 10px;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Add your product</h1>
-    <input id="name" type="text" placeholder="Type product name" /><br/>
-    <input id="image" type="text" placeholder="Type product url link for image" /><br/>
-    <input  id="price" type="number" placeholder="Type product price" /><br/>
-    <button onclick="addToLS()" >Submit Product</button>
+    <div id="navbar">
+        <div id="leftside">
+            <div>
+                <img src="data:image/jpeg;base64,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"
+                    alt="myntra" />
+            </div>
+            <div>
+                <a>MEN</a>
+                <a>WOMEN</a>
+                <a>KIDS</a>
+                <a>HOME & LIVING</a>
+                <a>BEAUTY</a>
+                <a>STUDIO</a>
+            </div>
+        </div>
+        <div id="rightside">
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Search for products, brands and more">
+            </div>
+            <div>
+                <button>Update</button>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h6>Profile</h6>
+                </div>
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <h6>Whishlist</h6>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h6>Bag</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bodydiv">
+        <div id="maindiv">
+            <div id="imgdiv"></div>
+            <img src="Screenshot (62).png" alt="">
+            <h1>Add your product</h1>
+            <label id="lablediv">Product Title</label><br>
+            <input id="name" type="text" placeholder="Type product name" /><br />
+            <label id="lablediv">Product Imge</label><br>
+            <input id="image" type="text" placeholder="Type product url link for image" /><br />
+            <label id="lablediv">Product price</label><br>
+            <input id="price" type="number" placeholder="Type product price" /><br />
+            <p>By continuing , I agree to the <span style="color: #ff3f6c;">Terms of Use</span> & <span
+                    style="color: #ff3f6c;">Privacy policy</span> </p>
+            <button id="paradiv" onclick="addToLS()">Submit Product</button>
+        </div>
+    </div>
     <script src="/server.js"></script>
 </body>
+
 </html>
